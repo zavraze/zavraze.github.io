@@ -1,28 +1,68 @@
+/* style.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-}
-h3 {
-    color: aqua;
+  font-family: 'Arial', sans-serif;
+  background-color: #89cff0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://image.pngaaa.com/0/2088000-small.png'), url('https://pngfre.com/wp-content/uploads/balloon-png-25.png');
+  background-repeat:no-repeat, no-repeat;
+  background-size: 150px, 150px;
+  background-position: left bottom, right bottom;
+  min-height: 100vh;
 }
 
-.container {
-    text-align: center;
-    flex-direction: row;
+.text {
+  text-align: center;
+  margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+h1 {
+  font-family:cursive;
+  color: #c98d8d;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #70737b;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 10px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
+  padding: 15px 30px;
+  font-size: 1em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none;
+}
+
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:nth-child(odd) {
+  background-color: #7ac8bf;
+  color: #0b0101;
+}
+
+button:nth-child(even) {
+  background-color: #7789c0;
+  color: #030000;
 }
