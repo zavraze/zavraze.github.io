@@ -40,7 +40,7 @@ body {
   position: fixed;
   width: 100px; /* Adjust the width as needed */
   height: auto;
-  animation: floatBalloon 5s forwards infinite; /* CSS animation for floating effect */
+  animation: floatBalloon 5s infinite alternate; /* CSS animation for floating effect */
   transform-origin: bottom;
   z-index: -1;
 }
