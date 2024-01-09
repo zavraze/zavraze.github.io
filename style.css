@@ -9,23 +9,66 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('https://image.pngaaa.com/0/2088000-small.png'), url('https://pngfre.com/wp-content/uploads/balloon-png-25.png');
-  background-repeat:no-repeat, no-repeat;
-  background-size: 150px, 150px;
-  background-position: left bottom, right bottom;
   min-height: 100vh;
+  position: relative;
 }
 
 .text {
   text-align: center;
+  position: relative;
   margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+.animation {
+  position: absolute;
+  width: 80px;
+  height: auto;
+}
+
+.left {
+  left:20px;
+  bottom: 0;
+}
+
+.right {
+  right: 20px;
+  bottom: 0;
+  transform: rotate(260deg);
+}
+
+.balloon {
+  position: fixed;
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+  animation: floatBalloon 5s forwards infinite; /* CSS animation for floating effect */
+  transform-origin: bottom;
+  z-index: -1;
+}
+
+.balloon-left {
+  left: 20px;
+  bottom: 0;
+}
+
+.balloon-right {
+  right: 20px;
+  bottom: 0;
+}
+
+@keyframes floatBalloon {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-100px);
+  }
 }
 
 h1 {
   font-family:cursive;
   color: #c98d8d;
   font-size: 3em;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 p {
