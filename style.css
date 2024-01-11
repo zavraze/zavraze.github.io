@@ -1,111 +1,115 @@
-/* style.css */
+  /* style.css */
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #89cff0;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  position: relative;
-}
-
-.text {
-  text-align: center;
-  position: relative;
-  margin-bottom: 20px; /* Add margin at the bottom */
-}
-
-.animation {
-  position: absolute;
-  width: 80px;
-  height: auto;
-}
-
-.left {
-  left:20px;
-  bottom: 0;
-}
-
-.right {
-  right: 20px;
-  bottom: 0;
-  transform: rotate(260deg);
-}
-
-.balloon {
-  position: fixed;
-  width: 100px; /* Adjust the width as needed */
-  height: auto;
-  animation: floatBalloon 5s infinite alternate; /* CSS animation for floating effect */
-  transform-origin: bottom;
-  z-index: -1;
-}
-
-.balloon-left {
-  left: 20px;
-  bottom: 0;
-}
-
-.balloon-right {
-  right: 20px;
-  bottom: 0;
-}
-
-@keyframes floatBalloon {
-  0% {
-      transform: translateY(0);
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #89cff0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
   }
-  100% {
-      transform: translateY(-100px);
+
+  .text {
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px; /* Add margin at the bottom */
   }
-}
 
-h1 {
-  font-family:cursive;
-  color: #c98d8d;
-  font-size: 3em;
-  margin-bottom: 30px;
-}
+  .animation {
+    position: absolute;
+  }
 
-p {
-  color: #70737b;
-  font-size: 1em;
-  margin-bottom: 10px;
-}
+  .left {
+    height: auto;
+    width: 100px;
+    left:20px;
+    bottom: 0;
+  }
 
-.box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  
-}
+  .right {
+    height: auto;
+    width: 80px;
+    right: 20px;
+    bottom: 0;
+  }
 
-button {
-  padding: 15px 30px;
-  font-size: 1em;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  outline: none;
-}
+  .balloon {
+    position: fixed;
+    width: 350px; /* Adjust the width as needed */
+    height: auto;
+    animation: swayBalloon 5s infinite alternate; /* CSS animation for floating effect */
+    transform-origin: bottom;
+    z-index: -1;
+  }
+
+  .balloon-left {
+    left: calc(20px - 10%);
+    bottom: 0;
+  }
+
+  .balloon-right {
+    right: calc(20px - 10%) ;
+    bottom: 0;
+  }
+
+  @keyframes swayBalloon {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform:rotateZ(20deg);
+    }
+    100% {
+        transform: rotateZ(0px);
+    }
+  }
+
+  h1 {
+    font-family:cursive;
+    color: #c98d8d;
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: #70737b;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    
+  }
+
+  button {
+    padding: 15px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+  }
 
 
-button:active {
-  transform: scale(0.95);
-}
+  button:active {
+    transform: scale(0.95);
+  }
 
-button:nth-child(odd) {
-  background-color: #7ac8bf;
-  color: #0b0101;
-}
+  button:nth-child(odd) {
+    background-color: #7ac8bf;
+    color: #0b0101;
+  }
 
-button:nth-child(even) {
-  background-color: #7789c0;
-  color: #030000;
-}
+  button:nth-child(even) {
+    background-color: #7789c0;
+    color: #030000;
+  }
