@@ -3,7 +3,7 @@ function showMessages(day) {
 
     const messagePage = window.open("", "_blank", "width=400,height=400");
 
-    messagePage.document.write("<h2>Happy Birthday, my bebelabsugarplum1</h2>");
+    messagePage.document.write("<h2>Happy Birthday, my bebelabsugarplum!</h2>");
     messagePage.document.write("<u>Day" + day + "</u>");
     messagePage.document.write("<ul>");
     messages.forEach(element => {
