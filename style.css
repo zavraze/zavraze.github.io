@@ -13,10 +13,44 @@
     position: relative;
   }
 
+  .container {
+    text-align: center;
+    position: relative;
+    top: 150px;
+  }
+
+  .polaroid {
+    position:relative;
+    display: inline-block;
+  }
+
+  img.love,
+  img.moon {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 15px 40px 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+
+  #trishaPolaroid {
+    margin-right: 300px;
+    transform: rotate(340deg);
+  }
+
+  #babePolaroid {
+    margin-left: 300px;
+    transform: rotate(20deg);
+  }
+
   .text {
     text-align: center;
     position: relative;
     margin-bottom: 20px; /* Add margin at the bottom */
+    bottom: 50px;
   }
 
   .animation {
@@ -25,15 +59,15 @@
 
   .left {
     height: auto;
-    width: 100px;
-    left:20px;
+    width:90px;
+    left:0px;
     bottom: 0;
   }
 
   .right {
     height: auto;
     width: 80px;
-    right: 20px;
+    right: 0px;
     bottom: 0;
   }
 
@@ -47,12 +81,12 @@
   }
 
   .balloon-left {
-    left: calc(20px - 10%);
+    left: 2000px;
     bottom: 0;
   }
 
   .balloon-right {
-    right: calc(20px - 10%) ;
+    right: 2000px;
     bottom: 0;
   }
 
@@ -70,23 +104,26 @@
 
   h1 {
     font-family:cursive;
-    color: #c98d8d;
+    color: #ff8787;
     font-size: 3em;
     margin-bottom: 30px;
   }
 
   p {
-    color: #70737b;
+    color: #8c8f97;
     font-size: 1em;
     margin-bottom: 10px;
   }
 
   .box {
+    margin-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    
+    position: relative;
+    z-index: 1;
+    bottom: 30px;
   }
 
   button {
@@ -105,11 +142,11 @@
   }
 
   button:nth-child(odd) {
-    background-color: #7ac8bf;
+    background-color: #81ebde;
     color: #0b0101;
   }
 
   button:nth-child(even) {
-    background-color: #7789c0;
+    background-color: #839ff1;
     color: #030000;
   }
